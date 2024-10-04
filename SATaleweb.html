@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comic - Temporada 1</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #242424; /* Fondo negro */
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        .categories {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .category-btn {
+            padding: 12px 25px;
+            background-color: #6C63FF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 25px;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 10px rgb(68, 68, 68);
+        }
+        .category-btn:hover {
+            background-color: #5548C8;
+        }
+        .season {
+            margin: 40px auto;
+            text-align: center;
+        }
+        h2 {
+            color: #fff;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        .slots {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .slot {
+            width: 250px;
+            height: 350px;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            margin: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+        }
+        .slot img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+        .slot:hover img {
+            transform: scale(1.05);
+        }
+        .pages {
+            display: none;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .pages img {
+            width: 720px;
+            height: 936px;
+            margin-bottom: 20px;
+            border: 4px solid #fff;
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(255, 255, 255, 0.2);
+        }
+        .back-btn {
+            margin: 20px;
+            padding: 10px 25px;
+            background-color: #FF6347;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 25px;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .back-btn:hover {
+            background-color: #e55340;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="categories">
+        <button class="category-btn">English</button>
+        <button class="category-btn">Español</button>
+    </div>
+
+    <div class="season">
+        <h2>Temporada 1</h2>
+        <div class="slots">
+            <div class="slot active" onclick="openSlot(1)">
+                <img src="Chapter1.png" alt="Chapter 1"> <!-- Imagen de Chapter 1 -->
+            </div>
+        </div>
+    </div>
+
+    <div id="pages" class="pages">
+        <button class="back-btn" onclick="closeSlot()">Volver</button>
+        
+        <img src="ComicHojadeaviso.png" alt="ComicHojadeaviso">
+        <img src="ComicHojadebendyaviso.png" alt="ComicHojadebendyaviso">
+        <img src="ComicHoja1.png" alt="ComicHoja1">
+        <img src="ComicHoja2.png" alt="ComicHoja2">
+        <img src="ComicHoja3.png" alt="ComicHoja3">
+        <img src="ComicHoja4.png" alt="ComicHoja4">
+        <img src="ComicHoja5.png" alt="ComicHoja5">
+        <img src="ComicHoja6.png" alt="ComicHoja6">
+        <img src="ComicHoja7.png" alt="ComicHoja7">
+        <img src="ComicHoja8.png" alt="ComicHoja8">
+        <img src="ComicHoja9.png" alt="ComicHoja1">
+        <img src="ComicHoja10.png" alt="ComicHoja10">
+        <img src="ComicHoja26.png" alt="ComicHoja26">
+        <img src="ComicHoja11.png" alt="ComicHoja11">
+        <img src="ComicHoja12.png" alt="ComicHoja12">
+        <img src="ComicHoja13.png" alt="ComicHoja13">
+        <img src="ComicHoja14.png" alt="ComicHoja14">
+        <img src="ComicHoja15.png" alt="ComicHoja15">
+        <img src="ComicHoja16.png" alt="ComicHoja16">
+        <img src="ComicHoja17.png" alt="ComicHoja17">
+        <img src="ComicHoja18.png" alt="ComicHoja18">
+        <img src="ComicHoja19.png" alt="ComicHoja19">
+        <img src="ComicHoja20.png" alt="ComicHoja20">
+        <img src="ComicHoja22.png" alt="ComicHoja22">
+        <img src="ComicHoja23.png" alt="ComicHoja23">
+        <img src="ComicHoja24.png" alt="ComicHoja24">
+        <img src="ComicHoja25.png" alt="ComicHoja25">
+        <img src="ComicHoja27.png" alt="ComicHoja27">
+        <img src="ComicHoja28.png" alt="ComicHoja28">
+    </div>
+
+    <script>
+        function openSlot(slotNumber) {
+            if (slotNumber === 1) {
+                document.getElementById('pages').style.display = 'flex';
+            }
+        }
+
+        function closeSlot() {
+            document.getElementById('pages').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
